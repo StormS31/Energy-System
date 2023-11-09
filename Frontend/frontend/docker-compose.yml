@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  angular:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    ports:
+       - "4200:4200"
+    networks:
+      deploy_net:
+        ipv4_address: 172.30.0.22
+
+networks:
+  deploy_net:
+    external: true

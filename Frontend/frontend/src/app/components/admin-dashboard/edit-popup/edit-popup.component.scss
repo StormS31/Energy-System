@@ -1,0 +1,19 @@
+.content-dialog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .field-dialog{
+    width: 95%;
+  }
+  .buttons-dialog{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 3rem;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .button-dialog{
+    width: 40%;
+  }

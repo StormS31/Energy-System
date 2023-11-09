@@ -1,0 +1,34 @@
+<form [formGroup]="editUserForm" (ngSubmit)="editUser(inputUser.id)">
+    <h1 mat-dialog-title>Edit user {{inputUser.username}}</h1>
+    <div mat-dialog-content class="content-dialog">
+        <mat-form-field class="field-dialog">
+            <mat-label>Id</mat-label>
+            <input disabled="true" matInput value={{inputUser.id}}>
+        </mat-form-field>
+        <mat-form-field class="field-dialog">
+            <mat-label>Username</mat-label>
+            <input disabled="true" matInput value={{inputUser.username}}>
+        </mat-form-field>
+        <mat-form-field class="field-dialog">
+            <mat-label>First name</mat-label>
+            <input formControlName="firstName" matInput placeholder="Type first name">
+        </mat-form-field>
+        <mat-form-field class="field-dialog">
+            <mat-label>Last name</mat-label>
+            <input formControlName="lastName" matInput placeholder="Type last name">
+        </mat-form-field>
+        <mat-form-field class="field-dialog">
+            <mat-label>Password</mat-label>
+            <input type="password" formControlName="password" matInput placeholder="Reset password">
+        </mat-form-field>
+        <mat-form-field class="field-dialog">
+            <mat-label>Role</mat-label>
+            <input formControlName="role" matInput placeholder="Type role">
+        </mat-form-field>
+    </div>
+
+    <div mat-dialog-actions class="buttons-dialog">
+        <button class="button-dialog" (click)="closeDialog()" mat-raised-button color="warn">Close</button>
+        <button class="button-dialog" mat-raised-button color="primary">Edit</button>
+    </div>
+</form>

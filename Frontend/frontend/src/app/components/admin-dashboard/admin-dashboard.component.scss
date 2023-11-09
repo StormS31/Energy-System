@@ -1,0 +1,50 @@
+.admin-wrapper{
+    height: 90%;
+}
+.panels{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height:100%;
+}
+.panel{
+    width:45%;
+    background-color: white;
+    margin: 1vh 3vh 0 0;
+    border-radius: 1rem;
+    height: 100%;
+}
+.panel p{
+    margin: 2vh 1vh;
+    font-family: Poppins-Light;
+    font-size: xx-large;
+
+}
+.table{
+    height: 90%;
+    overflow: auto;
+}
+.tool-panel{
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    height: 50%;
+    align-self:center;
+    border-radius: 1vh;
+    background-color: white;
+    margin-left: 1rem;
+}
+.tool-panel button{
+    width: 100%;
+    height: 3rem;
+}
+.tool-panel h2{
+    font-family: Poppins-Light;
+    font-size:x-large;  
+    align-self: center;
+    margin-top: 1vh;
+}
+.users-panel table{
+    width:100%;
+    table-layout: fixed !important;
+}

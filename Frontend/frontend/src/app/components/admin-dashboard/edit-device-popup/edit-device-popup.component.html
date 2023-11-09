@@ -1,0 +1,30 @@
+<form [formGroup]="editDeviceForm" (ngSubmit)="editDevice(inputDevice.id!)">
+    <h1 mat-dialog-title>Edit device</h1>
+    <div mat-dialog-content class="content-dialog">
+        <mat-form-field class="field-dialog">
+            <mat-label>Id</mat-label>
+            <input disabled="true" matInput value={{inputDevice.id}}>
+        </mat-form-field>
+        <mat-form-field class="field-dialog">
+            <mat-label>Address</mat-label>
+            <input formControlName="address" matInput placeholder="Type the address">
+        </mat-form-field>
+        <mat-form-field class="field-dialog">
+            <mat-label>Description</mat-label>
+            <input formControlName="description" matInput placeholder="Type the description">
+        </mat-form-field>
+        <mat-form-field class="field-dialog">
+            <mat-label>Consumption</mat-label>
+            <input formControlName="consumption" matInput placeholder="Type the consumption">
+        </mat-form-field>
+        <mat-form-field class="field-dialog">
+            <mat-label>Owner ID</mat-label>
+            <input formControlName="ownerId" matInput placeholder="Type the owner's id">
+        </mat-form-field>
+    </div>
+
+    <div mat-dialog-actions class="buttons-dialog">
+        <button class="button-dialog" (click)="closeDialog()" mat-raised-button color="warn">Close</button>
+        <button class="button-dialog" mat-raised-button color="primary">Edit</button>
+    </div>
+</form>

@@ -1,0 +1,30 @@
+<form [formGroup]="addUserForm">
+    <h1 mat-dialog-title>Add new user</h1>
+    <div mat-dialog-content class="content-dialog">
+        <mat-form-field class="field-dialog">
+            <mat-label>Username</mat-label>
+            <input formControlName="username" matInput placeholder="Type the username">
+        </mat-form-field>
+        <mat-form-field class="field-dialog">
+            <mat-label>First name</mat-label>
+            <input formControlName="firstName" matInput placeholder="Type first name">
+        </mat-form-field>
+        <mat-form-field class="field-dialog">
+            <mat-label>Last name</mat-label>
+            <input formControlName="lastName" matInput placeholder="Type last name">
+        </mat-form-field>
+        <mat-form-field class="field-dialog">
+            <mat-label>Password</mat-label>
+            <input type="password" formControlName="password" matInput placeholder="Type the password">
+        </mat-form-field>
+        <mat-form-field class="field-dialog">
+            <mat-label>Role</mat-label>
+            <input formControlName="role" matInput placeholder="Type the role">
+        </mat-form-field>
+    </div>
+
+    <div mat-dialog-actions class="buttons-dialog">
+        <button class="button-dialog" (click)="closeDialog()" mat-raised-button color="warn">Close</button>
+        <button class="button-dialog" disabled={{!this.addUserForm.valid}} mat-raised-button color="primary" (click)="addUser()" >Add</button>
+    </div>
+    </form>

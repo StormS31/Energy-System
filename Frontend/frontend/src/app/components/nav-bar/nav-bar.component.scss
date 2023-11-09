@@ -1,0 +1,16 @@
+.nav-toolbar{
+    background: var(--background);
+    background: var(--gradient);
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.4);
+}
+.nav-row{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+.row-item{
+    margin-right: 15vh;
+    margin-left: 2vh;
+    font-family: Poppins-Bold;
+    color:white;
+}
