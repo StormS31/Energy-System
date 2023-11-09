@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DATABASE: 'devices_microservice'
+      POSTGRES_PASSWORD: 'admin'
+      POSTGRES_USER: 'postgres'
+    ports:
+      - "5433:5432"
+    volumes:
+      - my-db:/var/lib/postgres/data
+    networks:
+      deploy_net:
+  backend-devices:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    ports:
+      - "8082:8081"
+    environment:
+      - DB_IP=host.docker.internal
+      - DB_PORT=5432
+      - DB_DBNAME=devices_microservice
+      - DB_USER=postgres
+      - DB_PASSWORD=admin
+    networks:
+      deploy_net:
+        ipv4_address: 172.30.0.3
+
+volumes:
+  my-db:
+
+networks:
+  deploy_net:
+    external: true

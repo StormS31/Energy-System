@@ -1,0 +1,12 @@
+<div class="bg">
+    <form [formGroup]="loginUserForm" (ngSubmit)="login()" class="login-panel">
+        <span class="title">SD Application</span>
+        <div class="inputs">
+            <label for="username">Username</label><br>
+            <input type="text" id="username" name="username" formControlName="username" matInput placeholder="Type your username">
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password" formControlName="password" placeholder="Type your password">
+        </div>
+        <button mat-raised-button color="primary" class="login-button">LOGIN</button>
+    </form>
+</div>

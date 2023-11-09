@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('assets/fonts/poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: Poppins-Medium;
+  src: url('assets/fonts/poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url('assets/fonts/poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+  font-family: Poppins-Light;
+  src: url('assets/fonts/poppins/Poppins-Light.ttf');
+}
+
+@font-face {
+  font-family: Poppins-SemiBold;
+  src: url('assets/fonts/poppins/Poppins-SemiBold.ttf');
+}
+
+:root {
+  --background: rgb(25, 249, 254);
+  --gradient: linear-gradient(45deg, rgba(25, 249, 254, 1) 0%, rgba(230, 20, 221, 1) 77%);
+}
+
+* {
+  font-family: Poppins-Regular;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #3D3D3D;
+}
+
+body {
+  margin: 0;
+  font-family: Poppins-Regular;
+}
+

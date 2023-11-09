@@ -1,0 +1,26 @@
+<form [formGroup]="addDeviceForm">
+    <h1 mat-dialog-title>Add new device</h1>
+    <div mat-dialog-content class="content-dialog">
+        <mat-form-field class="field-dialog">
+            <mat-label>Description</mat-label>
+            <input formControlName="description" matInput placeholder="Type the description">
+        </mat-form-field>
+        <mat-form-field class="field-dialog">
+            <mat-label>Address</mat-label>
+            <input formControlName="address" matInput placeholder="Type the address">
+        </mat-form-field>
+        <mat-form-field class="field-dialog">
+            <mat-label>Consumption</mat-label>
+            <input formControlName="consumption" matInput placeholder="Type the consumption">
+        </mat-form-field>
+        <mat-form-field class="field-dialog">
+            <mat-label>Owner Id</mat-label>
+            <input formControlName="ownerId" matInput placeholder="Type the owner's id">
+        </mat-form-field>
+    </div>
+
+    <div mat-dialog-actions class="buttons-dialog">
+        <button class="button-dialog" (click)="closeDialog()" mat-raised-button color="warn">Close</button>
+        <button class="button-dialog" disabled={{!this.addDeviceForm.valid}} mat-raised-button color="primary" (click)="addDevice()" >Add</button>
+    </div>
+    </form>
