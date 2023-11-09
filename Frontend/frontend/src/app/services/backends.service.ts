@@ -14,10 +14,6 @@ export class BackendsService {
   devicesBackendUrl: string = "http://localhost:8082/devices/";
   devicesUsersBackendUrl: string = "http://localhost:8082/users/"
 
-  // usersBackendUrl: string = "http://localhost:8080/users/";
-  // devicesBackendUrl: string = "http://localhost:8081/devices/";
-  // devicesUsersBackendUrl: string = "http://localhost:8081/users/"
-
   getUsersUrl: string = "get-users";
   deleteUserUrl: string = "delete-user/";
   getUserByIdUrl: string = "get-user/";
